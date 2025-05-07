@@ -11,3 +11,11 @@ async function main() {
 }
 
 await main();
+
+async function generateContent(promt) {
+    const result = await model.generateContent(promt)
+    return result.response.text()
+    
+}
+
+module.exports = generateContent
