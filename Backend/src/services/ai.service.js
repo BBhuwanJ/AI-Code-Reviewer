@@ -1,4 +1,4 @@
-import { GoogleGenAI } from "@google/genai";
+const { GoogleGenAI } = require("@google/genai");
 
 const ai = new GoogleGenAI(process.env.GOOGLE_GEMINI_KEY);
 
@@ -15,7 +15,7 @@ await main();
 async function generateContent(promt) {
     const result = await model.generateContent(promt)
     return result.response.text()
-    
+
 }
 
 module.exports = generateContent

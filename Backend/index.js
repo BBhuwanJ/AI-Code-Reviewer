@@ -1,4 +1,4 @@
-const app = require('./src/app')
+const app = require('./src/app.js')
 require('dotenv').config()
 
 app.listen(3000, () => {

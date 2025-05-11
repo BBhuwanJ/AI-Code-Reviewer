@@ -1,4 +1,5 @@
 const aiService = require('../services/ai.service')
+
 module.exports.getResponse = async (req, res) => {
     const promt = req.query.promt;
     if (!promt) {
@@ -6,4 +7,5 @@ module.exports.getResponse = async (req, res) => {
 
     }
     const response = await aiService(prompt)
+    res.send(response)
 }
